@@ -1,0 +1,179 @@
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  background: #f5f5f5;
+}
+
+button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* 75% content / 25% ad column layout */
+main {
+  width: 100%;
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  gap: 24px;
+  /* stretch columns to equal height */
+  align-items: stretch;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 20px;
+  /* ensure the columns fill the viewport between header and footer */
+  min-height: calc(100vh - 88px - 120px);
+}
+
+.content-area {
+  width: 75%;
+  min-width: 0;
+}
+
+.ad-column {
+  position: sticky;
+  top: 100px;
+  width: 100%;
+  /* stretch to match content column height */
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: calc(100vh - 88px - 120px);
+}
+
+.ad-section{
+  width: 100%;
+  /* make this fill the ad-column vertically */
+  height: 100%;
+  background: linear-gradient(135deg, #003da3 0%, #0047b3 50%, #0052cc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.ad-section .ad-inner {
+  width: 100%;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.ad-section .ad-box {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.ad-section .ad-box.small {
+  background: rgba(255,255,255,0.06);
+}
+
+
+.ad-box {
+  background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+  border: 2px solid #0040aa;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,52,204,0.15);
+  transition: box-shadow 0.2s;
+}
+
+.ad-box:hover { box-shadow: 0 8px 20px rgba(0,52,204,0.25); }
+
+.ad-box.small { 
+  padding: 14px;
+  font-size: 13px;
+  background: linear-gradient(135deg, #003da3 0%, #0052cc 100%);
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .app-main { 
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 20px 16px;
+  }
+  .ad-column { display: none; }
+}
+
+@media (max-width: 768px) {
+  .app-main { 
+    padding: 16px 12px;
+  }
+}
+
+/* Additional responsive tuning for tablets and mobiles */
+@media (max-width: 1200px) {
+  .app-main { gap: 18px; padding: 22px 18px; }
+  .ad-box { font-size: 13px; padding: 16px; }
+}
+
+/* Ensure images and media scale nicely inside the content area */
+.content-area img,
+.content-area video,
+.content-area picture,
+.content-area .top-news img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Headings and typography adjustments for different device sizes */
+h1, h2, h3, h4 {
+  line-height: 1.15;
+}
+
+@media (max-width: 1000px) {
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.6rem; }
+  .logo-text { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  .logo-text { display: none; }
+  .header .logo img { height: 44px; width: auto; }
+  .app-main { padding: 12px 10px; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.3rem; }
+  h2 { font-size: 1.1rem; }
+  .ad-section { padding: 12px; }
+  .ad-section .ad-inner { max-width: 220px; }
+  /* ensure content blocks have comfortable spacing on small screens */
+  main { padding-bottom: 24px; }
+}
+
+/* Make sure sticky ad doesn't overflow on small viewports */
+@media (max-height: 700px) and (min-width: 1001px) {
+  .ad-column { position: static; }
+}

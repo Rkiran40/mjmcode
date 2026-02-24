@@ -1,0 +1,185 @@
+/* Sticky footer for all pages */
+html, body, #root {
+  height: 100%;
+}
+.app-main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.content-area {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0 12px 0;
+  font-size: 1em;
+  letter-spacing: 1px;
+  border-top: 1px solid #e0e0e0;
+}
+@media (max-width: 700px) {
+  footer {
+    font-size: 0.95em;
+    padding: 12px 0 8px 0;
+  }
+}
+/* HEADER & NAV MOBILE RESPONSIVE */
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column !important;
+    padding: 0 0 10px 0 !important;
+    min-width: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  .logo {
+    margin: 0 auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo img {
+    width: 80px !important;
+    height: auto !important;
+  }
+  .logo-text {
+    font-size: 1.1em !important;
+    margin-left: 0 !important;
+    text-align: center;
+    display: block;
+    margin-top: 4px;
+  }
+  .lang-btn {
+    font-size: 1em !important;
+    padding: 7px 16px !important;
+    border-radius: 8px !important;
+    margin: 0 8px 0 0 !important;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    z-index: 10;
+  }
+  .hamburger {
+    display: block !important;
+    font-size: 2em !important;
+    background: none;
+    border: none;
+    color: #2563eb;
+    margin: 0 0 0 10px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    z-index: 10;
+  }
+  .nav {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    background: #fff !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1em !important;
+    overflow-x: auto;
+  }
+  .nav a {
+    padding: 12px 0 !important;
+    border-bottom: 1px solid #e0e7ef !important;
+    text-align: center;
+    font-size: 1em !important;
+    width: 100%;
+    display: block;
+  }
+  marquee {
+    font-size: 1.1em !important;
+    padding: 7px 0 !important;
+  }
+}
+/* MOBILE RESPONSIVE STYLES */
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+  .app-main, .content-area, main {
+    padding: 0 !important;
+  }
+  table {
+    font-size: 15px;
+    width: 100% !important;
+    display: block;
+    overflow-x: auto;
+    border-radius: 0;
+  }
+  th, td {
+    padding: 8px 4px !important;
+    font-size: 15px !important;
+    word-break: break-word;
+  }
+  form {
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: stretch !important;
+  }
+  input, button, select, textarea {
+    font-size: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .ad-column, aside[aria-label="Advertisements"] {
+    display: none !important;
+  }
+  .album-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .news-block, .album-detail, .dashboard, .card, .gallery-list, .admin-form, .admin-table {
+    padding: 10px !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+    box-shadow: none !important;
+  }
+  h1, h2, h3 {
+    font-size: 1.3em !important;
+  }
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Noto Sans Telugu", system-ui, sans-serif;
+  background-color: #f9f9f9;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+  display: block;
+}

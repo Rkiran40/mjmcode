@@ -1,0 +1,31 @@
+.epaper-container {
+  padding: 20px;
+  max-width: 600px;
+  margin-top: 40px;
+}
+
+.epaper-container h2 {
+  margin-bottom: 20px;
+}
+
+.epaper-list {
+  list-style: none;
+  padding: 0;
+}
+
+.epaper-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.epaper-list a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+}

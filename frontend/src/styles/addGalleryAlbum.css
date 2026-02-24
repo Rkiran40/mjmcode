@@ -1,0 +1,53 @@
+.album-form-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.album-form-container h2 {
+  margin-bottom: 20px;
+}
+
+.album-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-form-container input,
+.album-form-container select,
+.album-form-container textarea {
+  margin-bottom: 12px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.album-form-container textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.album-form-container label {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.image-count {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.album-form-container button {
+  padding: 12px;
+  font-size: 16px;
+  background: #c62828;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.album-form-container button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}

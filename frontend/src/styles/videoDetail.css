@@ -1,0 +1,33 @@
+.video-detail-page {
+    padding: 30px;
+}
+
+.main-video iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.main-video h2 {
+    margin-top: 15px;
+}
+
+.related-section {
+    margin-top: 40px;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.related-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.related-card p {
+    font-size: 14px;
+    margin-top: 8px;
+}

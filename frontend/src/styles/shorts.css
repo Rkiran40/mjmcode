@@ -1,0 +1,29 @@
+.shorts-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.short-item {
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+.short-item iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.short-info {
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+    color: white;
+    font-size: 16px;
+}

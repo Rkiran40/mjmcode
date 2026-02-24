@@ -1,0 +1,124 @@
+.footer {
+  background: #0b0b0b;
+  color: #fff;
+  margin-top: 40px;
+  padding: 28px 16px;
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+}
+
+.footer-inner {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-brand h3 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+}
+
+.footer-brand .muted {
+  margin: 0;
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-link {
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 6px;
+}
+
+.footer-bottom {
+  margin-top: 18px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding-top: 12px;
+  font-size: 13px;
+  color: #cfcfcf;
+}
+/* 
+.footer-contact{
+  display: flex;
+  gap: 15px;
+} */
+
+.contact-item{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  width: auto;
+}
+
+@media (max-width: 1200px) {
+  .footer { padding: 24px 14px; }
+  .footer-inner { gap: 20px; }
+  .footer-brand h3 { font-size: 16px; }
+  .footer-nav a { font-size: 13px; }
+}
+
+@media (max-width: 1000px) {
+  .footer { padding: 20px 12px; }
+  .footer-inner { gap: 16px; }
+  .footer-brand h3 { font-size: 15px; }
+  .footer-nav { gap: 10px; }
+  .footer-nav a { font-size: 12px; }
+  .social-link { width: 32px; height: 32px; }
+}
+
+@media (max-width: 720px) {
+  .footer { padding: 16px 10px; }
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+  .footer-nav { justify-content: center; gap: 8px; }
+  .footer-nav a { font-size: 11px; }
+  .footer-brand h3 { font-size: 14px; }
+  .footer-brand .muted { font-size: 12px; }
+  .social-link { width: 30px; height: 30px; }
+}
+
+@media (max-width: 480px) {
+  .footer { padding: 12px 8px; margin-top: 20px; }
+  .footer-inner { gap: 10px; }
+  .footer-brand h3 { font-size: 13px; margin-bottom: 4px; }
+  .footer-brand .muted { font-size: 11px; }
+  .footer-nav { gap: 6px; }
+  .footer-nav a { font-size: 10px; }
+  .social-link { width: 28px; height: 28px; font-size: 12px; }
+  .footer-bottom { font-size: 10px; padding-top: 8px; margin-top: 10px; }
+}
