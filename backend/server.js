@@ -17,7 +17,7 @@ const app = express();
 
 const allowedOrigins = (
   process.env.CORS_ORIGIN ||
-  "http://localhost:5173,https://pratyakshanews.com,https://www.pratyakshanews.com"
+  "http://localhost:5173","https://pratyakshanews.com","https://www.pratyakshanews.com"
 )
   .split(",")
   .map(origin => origin.trim());
