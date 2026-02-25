@@ -15,12 +15,21 @@ const breakingNewsRoutes = require("./routes/breakingNewsRoutes");
 const app = express();
 
 
-const allowedOrigins = (
-  process.env.CORS_ORIGIN ||
-  "http://localhost:5173","https://pratyakshanews.com","https://www.pratyakshanews.com"
-)
-  .split(",")
-  .map(origin => origin.trim());
+// const allowedOrigins = (
+//   process.env.CORS_ORIGIN ||
+//   "http://localhost:5173","https://pratyakshanews.com","https://www.pratyakshanews.com"
+// )
+//   .split(",")
+//   .map(origin => origin.trim());
+
+
+const allowedOrigins = process.env.CORS_ORIGIN
+  ? process.env.CORS_ORIGIN.split(",").map(origin => origin.trim())
+  : [
+      "http://localhost:5173",
+      "https://pratyakshanews.com",
+      "https://www.pratyakshanews.com"
+    ];
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -32,9 +41,13 @@ const corsOptions = {
     }
 
     logger.warn(`Blocked by CORS: ${origin}`);
-    callback(new Error("Not allowed by CORS"));
+    return callback(new Error("Not allowed by CORS"));
   },
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: [
+    "Content-Type",
+    "Authorization"
+    ],
   credentials: true,
   optionsSuccessStatus: 204,
 };
