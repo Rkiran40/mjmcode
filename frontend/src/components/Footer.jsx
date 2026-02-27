@@ -6,7 +6,7 @@ import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ width: "100%" }}>
       <div className="footer-inner huge-footer">
         <div className="footer-col footer-brand">
           <Link to="/">
@@ -33,7 +33,7 @@ function Footer() {
           </nav>
         </div>
         <div className="footer-contact">
-          <h3 style={{textDecoration: "underline", marginBottom: "18px", fontWeight: 600}}>For More Queries Contact us:</h3>
+          <h3 style={{ textDecoration: "underline", marginBottom: "18px", fontWeight: 600,textAlign:"center" }}>For More Information:</h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             {/* Email */}
             <a
@@ -49,7 +49,6 @@ function Footer() {
                 padding: "12px 16px",
                 color: "#222",
                 textDecoration: "none",
-                boxShadow: "0 2px 8px #e0e7ef",
                 transition: "background 0.2s"
               }}
             >
@@ -57,48 +56,48 @@ function Footer() {
               <span style={{ marginLeft: "12px", fontSize: "1.1em", fontWeight: 500 }}>pratyakshanewspaper@gmail.com</span>
             </a>
             {/* Phone Call */}
-            <a
-              href="tel:+919299991059"
-              className="contact-item"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                background: "#f3f4f6",
-                borderRadius: "8px",
-                padding: "12px 16px",
-                color: "#222",
-                textDecoration: "none",
-                boxShadow: "0 2px 8px #e0e7ef",
-                transition: "background 0.2s"
-              }}
-            >
-              <FaPhoneAlt size={28} style={{ color: "#10b981" }} />
-              <span style={{ marginLeft: "12px", fontSize: "1.1em", fontWeight: 500 }}>Call us</span>
-            </a>
-            {/* WhatsApp Message */}
-            <a
-              href="https://wa.me/919299991059"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-item"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                background: "#e6f4ea",
-                borderRadius: "8px",
-                padding: "12px 16px",
-                color: "#222",
-                textDecoration: "none",
-                boxShadow: "0 2px 8px #e0e7ef",
-                transition: "background 0.2s"
-              }}
-            >
-              <FaWhatsapp size={28} color="#25D366" />
-              <span style={{ marginLeft: "12px", fontSize: "1.1em", fontWeight: 500 }}>WhatsApp</span>
-            </a>
+            <div style={{display:"flex",gap:"10px",justifyContent:"center"}}>
+              <a
+                href="tel:+919299991059"
+                className="contact-item"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  background: "#f3f4f6",
+                  borderRadius: "8px",
+                  padding: "12px 16px",
+                  color: "#222",
+                  textDecoration: "none",
+                  transition: "background 0.2s"
+                }}
+              >
+                <FaPhoneAlt size={28} style={{ color: "#10b981" }} />
+                <span style={{ marginLeft: "12px", fontSize: "1.1em", fontWeight: 500 }}>Call us</span>
+              </a>
+              {/* WhatsApp Message */}
+              <a
+                href="https://wa.me/919299991059"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-item"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  background: "#e6f4ea",
+                  borderRadius: "8px",
+                  padding: "12px 16px",
+                  color: "#222",
+                  textDecoration: "none",
+                  transition: "background 0.2s"
+                }}
+              >
+                <FaWhatsapp size={28} color="#25D366" />
+                <span style={{ marginLeft: "12px", fontSize: "1.1em", fontWeight: 500 }}>WhatsApp</span>
+              </a>
+            </div>
           </div>
         </div>
-        
+
       </div>
       <div className="footer-bottom" style={{ marginTop: '32px' }}>
         <p>© {new Date().getFullYear()} Pratyaksha News. All rights reserved.</p>

@@ -1,6 +1,7 @@
 /* Sticky footer for all pages */
 html, body, #root {
   height: 100%;
+  margin-left: 0;
 }
 .app-main {
   min-height: 100vh;

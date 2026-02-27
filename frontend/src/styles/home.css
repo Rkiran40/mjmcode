@@ -3,7 +3,11 @@
   grid-template-columns: 3fr 1fr;
   gap: 20px;
   /* padding: 16px; */
-  margin-top: 70px;
+  margin-top: 60px;
+  padding-left: 8px;
+  margin-right: 16px;
+  /* padding: 8px; */
+  width: 100%;
 }
 
 .main-content {
@@ -19,7 +23,6 @@
 
 .ad-sidebar {
   /* position: sticky; */
-  top: 90px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -242,7 +245,8 @@ section h2 {
 
 @media (max-width: 480px) {
   .top-news{
-    margin-top: 18px;
+    margin-top: 38px;
+
   }
   .top-news img{
     height: 250px;

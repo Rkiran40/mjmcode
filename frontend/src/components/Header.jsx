@@ -52,11 +52,11 @@ function Header() {
           <div className="header-desktop-row">
             <div className="logo">
               <Link to="/" onClick={closeMenu}>
-                <img src="/logo.png" alt="" height={35} width={50} />
+                <img src="/logo.png" alt="" />
               </Link>
             </div>
-            <span className="date-text">{getFormattedDate()}</span>
-            <span className="logo-text">ప్రత్యక్ష న్యూస్</span>
+            <span className="date-text" style={{marginLeft:"120px",paddingTop:"20px"}}>{getFormattedDate()}</span>
+            <span className="logo-text" style={{marginLeft:"280px"}}>ప్రత్యక్ష న్యూస్</span>
             <div className="header-actions">
               <button className="lang-btn" onClick={toggleLanguage}>
                 {language === "te" ? "English" : "తెలుగు"}
