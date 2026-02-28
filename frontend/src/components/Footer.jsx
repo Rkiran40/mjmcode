@@ -6,7 +6,7 @@ import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="footer" style={{ width: "100%" }}>
+    <footer className="footer" style={{ width: "calc(100% - 24px)" }}>
       <div className="footer-inner huge-footer">
         <div className="footer-col footer-brand">
           <Link to="/">
@@ -72,9 +72,8 @@ function Footer() {
                 }}
               >
                 <FaPhoneAlt size={28} style={{ color: "#10b981" }} />
-                <span style={{ marginLeft: "12px", fontSize: "1.1em", fontWeight: 500 }}>Call us</span>
+                {/* <span style={{ marginLeft: "12px", fontSize: "1.1em", fontWeight: 500 }}>Call us</span> */}
               </a>
-              {/* WhatsApp Message */}
               <a
                 href="https://wa.me/919299991059"
                 target="_blank"
@@ -92,7 +91,7 @@ function Footer() {
                 }}
               >
                 <FaWhatsapp size={28} color="#25D366" />
-                <span style={{ marginLeft: "12px", fontSize: "1.1em", fontWeight: 500 }}>WhatsApp</span>
+                {/* <span style={{ marginLeft: "12px", fontSize: "1.1em", fontWeight: 500 }}>WhatsApp</span> */}
               </a>
             </div>
           </div>
